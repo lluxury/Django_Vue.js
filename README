@@ -35,4 +35,8 @@ pip3 install Django==2.0.7
 mkdir project01
 cd project01
 
+# 创建 Django 项目
+django-admin startproject yann_manager .
 
+# 创建 App 做为后端
+python manage.py startapp backend
