@@ -23,3 +23,16 @@ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 pip3 install --upgrade pip 
 yum install python-virtualenv 
 
+virtualenv yann04
+virtualenv --python=/usr/local/python3/bin/python3 yann04
+source yann04/bin/activate
+# yann04只是虚拟环境的名字,项目不使用
+# 但是在包里安装软件的时候,一定要回到根目录
+cd /root/Django_Vue.js/
+pip3 install Django==2.0.7
+
+
+mkdir project01
+cd project01
+
+
