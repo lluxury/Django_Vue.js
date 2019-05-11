@@ -56,3 +56,24 @@ cd frontend
 npm install
  # npm run dev
 npm run build
+
+# 新增
+vi ~/Django_Vue.js/project01/yann_manager/urls.py
+from django.conf.urls import url
+from django.views.generic import TemplateView
+
+    (r'^$', TemplateView.as_view(template_name="index.html")),
+
+
+# 更新
+vi ~/Django_Vue.js/project01/yann_manager/settings.py
+        # 'DIRS': [],
+        'DIRS': ['frontend/dist'],
+
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+# 新增
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "frontend/dist/static"),
+]
